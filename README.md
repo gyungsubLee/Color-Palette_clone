@@ -8,7 +8,7 @@
 
 
 ## ● View
-<img src="./이미지/view.png" width="50%">
+<img src="./이미지/view.png" width="80%">
 
 <br/><br/>
 
@@ -16,7 +16,7 @@
 
 ## ● Header
 
-<img src="./이미지/header.png" width="50%">
+<img src="./이미지/header.png" width="80%">
 
 
 - [] 뒤로가기 버튼 
@@ -32,7 +32,7 @@
 ## ● Main
 
 
-<img src="./이미지/main-view.png" width="50%">
+<img src="./이미지/main-view.png" width="80%">
 
 - [] Color-items - view 구현, Color-item__Array 구현 X 
 
@@ -45,7 +45,7 @@
 
 ## ● Footer
 
-<img src="./이미지/footer.png" width="50%">
+<img src="./이미지/footer.png" width="80%">
 
 
 
