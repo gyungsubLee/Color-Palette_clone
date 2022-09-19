@@ -1,0 +1,38 @@
+.main__color_items {
+    display: grid;
+    height: calc(100vh - var(--sidebar_height)*2);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.main__color_item {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main__color-item__copy-button {
+    border: solid 2px rgba(252, 252, 252, 0.6);
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 25px;
+    color: white;
+    opacity: 0;
+    transition: 0.2s linear;
+}
+
+
+.main__color-item__copy-button:hover {
+    opacity: 1;
+}
+
+.main__color-item__text {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    bottom: 5px;
+    right: 5px;
+}

@@ -1,2 +1,12 @@
-/* reset 처리 */
+/* reset*/
 @import url(./reset.css);
+
+/* variables(변수) */
+@import url(./variables.css);
+
+/* header */
+@import url(./components/header.css);
+/* main */
+@import url(./components/main.css);
+/* footer */
+@import url(./components/footer.css);
