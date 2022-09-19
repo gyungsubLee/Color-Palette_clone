@@ -10,3 +10,8 @@
 @import url(./components/main.css);
 /* footer */
 @import url(./components/footer.css);
+
+
+* {
+    box-sizing: border-box;
+}

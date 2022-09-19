@@ -1,12 +1,26 @@
 footer {
     height: var(--sidebar_height);
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+}
+
+@keyframes slide_left {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.slide_left {
+    overflow: hidden;
 }
 
 .footer__text {
     margin: 10px 20px;
     font-size: 25px;
     font-weight: var(--font-Weight);
+    animation: slide_left 18s linear infinite;
 }

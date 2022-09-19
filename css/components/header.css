@@ -3,7 +3,7 @@
     height: var(--sidebar_height);
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px;
+    margin: 0 15px;
     box-sizing: border-box;
 }
 
@@ -20,6 +20,7 @@ button {
 }
 
 .header>button:hover {
+    border-radius: 5px;
     box-shadow: 0.5px 0.5px 2px gray;
     transform: scale(1.1);
 }
