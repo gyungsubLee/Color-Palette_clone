@@ -4,8 +4,6 @@ const CFBarText = document.querySelector(".copy-bar__text");
 const CFMenu = document.querySelector(".format-menu");
 const CFMItems = document.getElementsByClassName("format-option");
 
-console.log(CFBarText.innerText);
-
 const handleCFBar = (event) => {
     CFMenu.classList.toggle("hidden");
 }
@@ -13,8 +11,9 @@ const handleCFBar = (event) => {
 CFBar.addEventListener('click', handleCFBar);
 
 const handleCFMItem = (CFMItem) => {
-    let Text = `Copy Format: ${CFMItem.innerText}`;
-    CFBarText.innerText = Text
+    const ColorFormat  = CFMItem.innerText;
+    console.log(ColorFormat);
+    CFBarText.innerText = `Copy Format: ${CFMItem.innerText}`;
     CFMenu.classList.add('hidden');
 }
 

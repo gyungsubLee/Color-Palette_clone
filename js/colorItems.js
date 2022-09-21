@@ -22,15 +22,22 @@ const colorItems = [
     ['ELECTROMAGNETIC','#2f3640'], // color 20
 ]
 
-
 const DcolorItems = document.getElementsByClassName('main__color_item');
 
-console.log(DcolorItems);
+const copy = (idx) => {
+    const $textarea = document.createElement("textarea");
+    document.body.appendChild($textarea);
+    $textarea.value =  colorItems[idx][1];
+    $textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild($textarea);
+}
 
 Array.from(DcolorItems).forEach(
     (colorItem, idx) => {
         colorItem.style.backgroundColor = colorItems[idx][1];
         colorItem.childNodes[3].innerText = colorItems[idx][0];
+        colorItem.childNodes[1].addEventListener('click', ()=>copy(idx));
 });
 
 
