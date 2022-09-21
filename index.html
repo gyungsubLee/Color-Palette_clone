@@ -11,13 +11,23 @@
 
 <body>
     <header class="header">
-        <button class="header-button__back">← Back</button>
+        <button class="header-button__back">
+            <a href="https://flatuicolors.com/">← Back</a>
+        </button>
         <div class="header__copy-container">
             <div class="header__copy-bar">
                 <span class="copy-bar__text">Copy Format: ${font Format} ▼</span>
             </div>
+            <ul class="format-dd">
+                <li class="format-option">HEX (#AA1923)</li>
+                <li class="format-option">HEX (AA1923)</li>
+                <li class="format-option">RGB - (1,2,3)</li>
+                <li class="format-option">RGBA - (1,2,3,0.4)</li>
+            </ul>
         </div>
-        <button class="header-button__sound">Sound🔊/🔇</button>
+        <button class="soundButton">
+            <span class="soundButton_text">Sound On</span>
+        </button>
     </header>
 
     <main class="main__color_items">
@@ -119,6 +129,9 @@
         <div class="footer__text">footer__textfooter__text</div>
         <div class="footer__text">footer__textfooter__text</div>
     </footer>
+
+    <script src="./js/soundButton.js"></script>
+
 </body>
 
 </html>
