@@ -19,7 +19,7 @@
 <img src="./이미지/header.png" width="80%">
 
 
-- [] 뒤로가기 버튼 
+- [x] 뒤로가기 버튼 
 
 - [] (RGB-HEX) convert-메뉴
 
