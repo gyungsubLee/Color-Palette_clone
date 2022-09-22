@@ -1,7 +1,7 @@
 const soundButton = document.querySelector(".soundButton");
 const buttons = document.getElementsByClassName("main__color-item__copy-button");
 
-const audio = new Audio("../audio/버튼.wav");
+const audio = new Audio('../audio/button.mp3');
 
 let isSOn = true; 
 
@@ -13,6 +13,5 @@ const handleSoundBntText = () => {
     audio.play();
   }
 };
-
 
 soundButton.addEventListener('click', handleSoundBntText);
