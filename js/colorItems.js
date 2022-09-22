@@ -23,7 +23,14 @@ const colorItems = [
 ]
 
 const DcolorItems = document.getElementsByClassName('main__color_item');
+const FText = document.getElementsByClassName('footer__text');
+const DcopyView = document.querySelector(".copyView");
+const DcopyViewSTex = document.querySelector(".copyView-subText");
 
+// footer color
+Array.from(FText).forEach((Text,idx) =>Text.style.color = colorItems[idx][1]);
+
+// Color Format Convert
 const ColorFmt = (idx) => {
     if(ColorFormat === "HEX (#AA1923)"){
         return colorItems[idx][1];
@@ -33,6 +40,7 @@ const ColorFmt = (idx) => {
     }
 }
 
+// copy 
 const copy = (idx) => {
     const $textarea = document.createElement("textarea");
     document.body.appendChild($textarea);
@@ -42,6 +50,16 @@ const copy = (idx) => {
     document.body.removeChild($textarea);
 }
 
+//copyButton Click시, veiw 
+const copyView = (idx) => {
+    DcopyView.classList.remove("hidden");
+    DcopyView.style.backgroundColor = ColorFmt(idx);
+    DcopyViewSTex.innerText = ColorFmt(idx);
+    setTimeout(()=>DcopyView.classList.add("hidden"), 1100);
+}
+
+
+// Color Items - bg, text, event
 Array.from(DcolorItems).forEach(
     (colorItem, idx) => {
         colorItem.style.backgroundColor = colorItems[idx][1];
@@ -51,6 +69,7 @@ Array.from(DcolorItems).forEach(
                  audio.play();
             };
             copy(idx);
+            copyView(idx);
         });
 });
 

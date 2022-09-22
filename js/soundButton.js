@@ -7,7 +7,7 @@ let isSOn = true;
 
 const handleSoundBntText = () => {
   isSOn = !isSOn
-  const Text = isSOn? "Sound On" : "Sound Off";
+  const Text = isSOn? "Sound On 🔊" : "Sound Off 🔇";
   soundButton.innerText = Text
   if(isSOn === true) {
     audio.play();
