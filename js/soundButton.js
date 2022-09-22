@@ -3,7 +3,7 @@ const buttons = document.getElementsByClassName("main__color-item__copy-button")
 
 const audio = new Audio("../audio/버튼.wav");
 
-var isSOn = true; 
+let isSOn = true; 
 
 const handleSoundBntText = () => {
   isSOn = !isSOn
