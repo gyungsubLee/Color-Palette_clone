@@ -38,7 +38,7 @@
 
 - [x] Color-item -  Color item bg/name 적용
 
-- [] 클릭 시 view - 구현 X
+- [x] 클릭 시 view - 구현 X
 
 
 <br/>
