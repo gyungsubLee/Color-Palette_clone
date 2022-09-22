@@ -21,9 +21,9 @@
 
 - [x] 뒤로가기 버튼 
 
-- [] (RGB-HEX) convert-메뉴
+- [x] (RGB-HEX) convert-메뉴
 
-- [] Sound on/off 버튼
+- [x] Sound on/off 버튼
 
 
 <br/>
@@ -46,14 +46,6 @@
 ## ● Footer
 
 <img src="./이미지/footer.png" width="80%">
-
-
-
-여기에 뭐 넣지? 
-
-슬라이드로 구현하긴 헀는데...
-
-icon 추가? 
 
 - [x] slide_text
 

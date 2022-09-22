@@ -10,9 +10,10 @@ const handleCFBar = (event) => {
 
 CFBar.addEventListener('click', handleCFBar);
 
+let ColorFormat = "HEX (#AA1923)";
+
 const handleCFMItem = (CFMItem) => {
-    const ColorFormat  = CFMItem.innerText;
-    console.log(ColorFormat);
+    ColorFormat  = CFMItem.innerText;
     CFBarText.innerText = `Copy Format: ${CFMItem.innerText}`;
     CFMenu.classList.add('hidden');
 }
