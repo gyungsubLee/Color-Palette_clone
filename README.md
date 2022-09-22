@@ -34,9 +34,9 @@
 
 <img src="./이미지/main-view.png" width="80%">
 
-- [] Color-items - view 구현, Color-item__Array 구현 X 
+- [x] Color-items - view 구현, Color-items Data: 이중 배열 구현
 
-- [] Color-item - view 구현, Color__bg/name 구현 X
+- [x] Color-item -  Color item bg/name 적용
 
 - [] 클릭 시 view - 구현 X
 

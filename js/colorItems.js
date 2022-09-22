@@ -37,7 +37,12 @@ Array.from(DcolorItems).forEach(
     (colorItem, idx) => {
         colorItem.style.backgroundColor = colorItems[idx][1];
         colorItem.childNodes[3].innerText = colorItems[idx][0];
-        colorItem.childNodes[1].addEventListener('click', ()=>copy(idx));
+        colorItem.childNodes[1].addEventListener('click', ()=>{
+            if(isSOn === true){
+                 audio.play();
+            };
+            copy(idx);
+        });
 });
 
 
