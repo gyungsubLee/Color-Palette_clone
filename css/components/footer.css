@@ -19,7 +19,7 @@ footer {
     }
 
     100% {
-        transform: translateX(0%);
+        transform: translateX(20%);
     }
 }
 
@@ -29,5 +29,5 @@ footer {
     font-size: 25px;
     width: 300px;
     font-weight: var(--font-Weight);
-    animation: slide_left 20s linear infinite;
+    animation: slide_left 22s linear infinite;
 }
