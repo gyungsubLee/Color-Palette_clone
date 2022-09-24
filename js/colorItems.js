@@ -1,4 +1,4 @@
-//colorItem = [colorName, HEX]
+//colorItem = [colorName, HEX, RGB]
 const colorItems = [
     ['PROTOSS PYLON', '#00a8ff', "rgb(0, 168, 255)"], // color 1
     ['PERIWINKLE','#9c88ff', "rgb(156, 136, 255)"], // color 2
@@ -27,54 +27,61 @@ const FText = document.getElementsByClassName('footer__text');
 const DcopyView = document.querySelector(".copyView");
 const DcopyViewSTex = document.querySelector(".copyView-subText");
 
-// footer color
-Array.from(FText).forEach((Text,idx) =>Text.style.color = colorItems[idx][1]);
+// Color Fomat Item
+const CFItem = (idx, num) => {
+    return colorItems[idx][num];
+};
 
 // Color Format Convert
-const ColorFmt = (idx) => {
+const ColorFmtConvert = (idx) => {
     if(ColorFormat === "HEX (#AA1923)"){
-        return colorItems[idx][1];
+        return CFItem(idx, 1); // CFItem - HEX
     }
     else {
-        return colorItems[idx][2];
+        return CFItem(idx, 2); // CFItem - RGB
     }
 }
 
 // copy 
-const copy = (idx) => {
+const copy = (value) => {
     const $textarea = document.createElement("textarea");
     document.body.appendChild($textarea);
-    $textarea.value =  ColorFmt(idx);
+    $textarea.value =  value;
     $textarea.select();
     document.execCommand('copy');
     document.body.removeChild($textarea);
 }
 
 //copyButton Click시, veiw 
-const copyView = (idx) => {
+const copyView = (value) => {
     DcopyView.classList.remove("hidden");
-    DcopyView.style.backgroundColor = ColorFmt(idx);
-    DcopyViewSTex.innerText = ColorFmt(idx);
+    DcopyView.style.backgroundColor = value;
+    DcopyViewSTex.innerText = value;
     setTimeout(()=>DcopyView.classList.add("hidden"), 1100);
+}
+
+// handleCFMTConvert
+const handleCFMT = (idx) => {
+    const CFmtV = ColorFmtConvert(idx);
+    isSOnB(isSOn);
+    copy(CFmtV);
+    copyView(CFmtV);
 }
 
 
 // Color Items - bg, text, event
 Array.from(DcolorItems).forEach(
     (colorItem, idx) => {
-        colorItem.style.backgroundColor = colorItems[idx][1];
-        colorItem.childNodes[3].innerText = colorItems[idx][0];
+        colorItem.style.backgroundColor = CFItem(idx, 1);    // CFItem - HEX
+        colorItem.childNodes[3].innerText = CFItem(idx, 0);  // CFItem - name
         colorItem.childNodes[1].addEventListener('click', ()=>{
-            if(isSOn === true){
-                 audio.play();
-            };
-            copy(idx);
-            copyView(idx);
+            handleCFMT(idx);
         });
 });
 
 
-
+// footer color 
+Array.from(FText).forEach((Text,idx) =>Text.style.color = CFItem(idx, 1)); // CFItem - HEX
 
 
 

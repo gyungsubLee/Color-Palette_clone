@@ -5,13 +5,17 @@ const audio = document.getElementById('sbnt');
 
 let isSOn = true; 
 
+const isSOnB = (isSOn) => {
+  if(isSOn === true) {
+    audio.play();
+  }
+}
+
 const handleSoundBntText = () => {
   isSOn = !isSOn
   const Text = isSOn? "Sound On 🔊" : "Sound Off 🔇";
   soundButton.innerText = Text
-  if(isSOn === true) {
-    audio.play();
-  }
+  isSOnB(isSOn);
 };
 
 soundButton.addEventListener('click', handleSoundBntText);
